@@ -1,0 +1,34 @@
+mixin icon(id, className)
+	svg(xmlns:xlink="http://www.w3.org/1999/xlink" class=className)
+		use(xlink:href="#tmpl-hh__icon-" + id href="#tmpl-hh__icon-" + id)
+
+mixin video(video, thumbnail, source="youtube")
+	.video(data-video-id=video data-video-source=source)
+		img.video__preview(src=thumbnail)
+		.video__play-btn
+			+icon('play-btn')
+
+mixin modal(id, withCloseBtn=true)
+	.modal(id=id)
+		.modal__window
+			if withCloseBtn
+				button.modal__close-btn(type="button")
+			block
+
+mixin nav-btn
+	.nav-btn
+		.nav-btn__line
+		.nav-btn__line
+		.nav-btn__line
+
+mixin stat-card(title, span, text) 
+	.stat-card 
+		.stat-card__title!=title
+			span.stat-card__span!=span 
+		.stat-card__text!=text
+
+mixin values-card(icon, title)
+	.values__card
+		.values__icon-wrapper
+			+icon(icon, 'values__card-icon')
+		.values__icon-title!=title

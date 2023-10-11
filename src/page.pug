@@ -1,0 +1,352 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER -->
+	.section.header
+		.header__inner
+			.header__logo
+				img.header__logo-img(src="https://hhcdn.ru/ichameleon/303980.svg")
+			.header__nav.nav
+				a.nav__item.anchor(href="#about") О компании
+				a.nav__item.anchor(href="#profucts") Наши продукты
+				a.nav__item.anchor(href="#life") Наша жизнь
+				a.nav__item.anchor(href="#contacts") Контакты
+				a.nav__item.vacancy-btn Вакансии
+			+nav-btn
+	<!-- END HEADER -->
+
+	<!-- START FIRST-SCREEN -->
+	.section.first-screen 
+		.container 
+			.first-screen__inner 
+				.first-screen__text 
+					.first-screen__title Мы финтех компания.
+					.first-screen__subtitle Создаем решения для умного <br> движения денег
+				.first-screen__img 
+					img(src="https://hhcdn.ru/file/17565509.png")
+	<!-- END FIRST-SCREEN -->
+
+	<!-- START SECTION STATS -->
+		.section.s-stats
+			.container 
+				.s-stats__cards
+					+stat-card("", "№1", "Первая платежная организация в Казахстане")
+					+stat-card("<span class='countup' data-value='10'>0</span>", "  лет", "В IT и fintech <br> рынке")
+					+stat-card("<span class='countup' data-value='150'>0</span>", "", "Сотрудников <br> в четырех странах")
+	<!-- END SECTION STATS -->
+
+	<!-- START ABOUT -->
+	.section.about#about
+		.container 
+			.about__inner 
+				.about__img-wrapper 
+					img(src="https://hhcdn.ru/file/17565517.png")
+				.about__content 
+					.about__title О нас
+					.about__text 
+						p Wooppay — международная финтех-компания, которая создает и внедряет платежные и технологические решения для пользователей по всему миру.
+					.about__from Мы из Караганды
+	<!-- END ABOUT -->
+
+	<!-- START USERS -->
+	.section.users 
+		.container 
+			.users__inner 
+				.users__content 
+					.users__title 12 млн. человек
+					.users__text 
+						p из более чем 30 стран хотя бы раз воспользовались нашими продуктами.
+				.users__img-wrapper 
+					img(src="https://hhcdn.ru/ichameleon/303983.png")
+	<!-- END USERS -->
+
+	<!-- START BANKS -->
+	.section.banks 
+		.container 
+			.banks__inner 
+				.banks__img-wrapper 
+					img(src="https://hhcdn.ru/ichameleon/303982.svg")
+				.banks__content 
+					.banks__title Банк эмитент
+					.banks__text 
+						p Эмитентом электронных денег в системе Wooppay выступает Halyk Bank
+			//- .banks__items 
+			//- 	.banks__item 
+			//- 		img(src="https://hhcdn.ru/ichameleon/303992.svg")
+			//- 	.banks__item 
+			//- 		img(src="https://hhcdn.ru/ichameleon/303990.svg")
+			//- 	.banks__item 
+			//- 		img(src="https://hhcdn.ru/ichameleon/303991.svg")
+			//- 	.banks__item 
+			//- 		img(src="https://hhcdn.ru/ichameleon/303994.svg")
+			//- 	.banks__item 
+			//- 		img(src="https://hhcdn.ru/ichameleon/303993.svg")
+	<!-- END BANKS -->
+
+	<!-- START PARTNERS -->
+	.sections.partners
+		.partners__title Так же наши партнеры
+		.swiper-container.partners-slider
+			.swiper-wrapper
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/303996.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304008.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304002.png")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/303995.png")
+				.swiper-slidev.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304003.svg")
+				//- .swiper-slide.partners-slider-slide
+				//- 	img.partners__img(src="https://hhcdn.ru/ichameleon/303999.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304006.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304007.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304001.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304000.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/303998.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304005.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/303997.svg")
+				.swiper-slide.partners-slider-slide
+					img.partners__img(src="https://hhcdn.ru/ichameleon/304004.png")
+
+	<!-- END PARTNERS -->
+
+	<!-- START PRODUCTS -->
+	.section.products#profucts
+		.container 
+			.products__inner 
+				.products__img-wrapper
+					img(src="https://hhcdn.ru/file/17565515.png")
+				.products__content 
+					.products__title Наши <br> продукты
+					.products__text 
+						p У нас много различных продуктов, <br> но самые известные это:
+	<!-- END PRODUCTS -->
+
+	<!-- START TABS -->
+	.section.tabs
+		.container 
+			.tab.tab--one
+				.tab-title PAAS
+					.tab-btn
+				.tab-content
+					.tab-text 
+						p 1. Объединяет в себе в себе платформенные решения Wooppay, которые предоставляются крупным партнерам, для реализации собственных финтех решений, без необходимости самостоятельной разработки и становления платежной организацией.
+						p 2. Включает в себя: МФС, шлюзы для агрегаторов и специальные проекты.
+			.tab.tab--two
+				.tab-title Woopkassa
+					.tab-btn
+				.tab-content
+					.tab-text 
+						p Это сервис для приема онлайн платежей (B2B). Предоставляет широкий набор способов по приему платежей как на сайтах, так и в мобильных приложениях (шлюзы, банкинг, МФС, карточный эквайринг).
+			.tab.tab--three
+				.tab-title Wooppay Wallet
+					.tab-btn
+				.tab-content
+					.tab-text 
+						p Кошельком пользуются для удобных и быстрых оплат. От коммунальных платежей и оплаты чека в заведениях, до гос.платежей и товаров в магазине.
+			.tab__link-wrapper 
+				.tab__link-text 
+					p Больше о наших продуктах вы сможете узнать на сайте
+				.tab__link-btn 
+					a(href="https://corp.wooppay.com/ru/index#projects" target="_blank") Больше о продуктах тут
+	<!-- END TABS -->
+
+	<!-- START LIFE -->
+	.section.life#life
+		.container 
+			.life__inner 
+				<!-- START TRAIN -->
+				.life__card.life__card--train
+					.swiper-container.train-slider
+						.swiper-wrapper
+							.swiper-slide.train-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304012.jpg")
+							.swiper-slide.train-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304011.jpg")
+							.swiper-slide.train-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304013.jpg")
+							.swiper-slide.train-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304009.jpg")
+							.swiper-slide.train-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304010.jpg")
+						.slider__pagination.slider__pagination--train
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+						.life__slider-logo 
+							img(src="https://hhcdn.ru/ichameleon/303981.svg")
+					.life__card-content 
+						.life__card-title Мы ходим на тренировки
+						.life__card-text 
+							p по футболу, волейболу, баскетболу. Играем в настольный теннис, дозор и киберспорт.  Участвуем в городских любительских турнирах и готовы принять усиления:)
+				<!-- END TRAIN -->
+				<!-- START PARTICIPATE -->
+				.life__card.life__card--participate
+					.swiper-container.participate-slider
+						.swiper-wrapper
+							.swiper-slide.participate-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304016.jpg")
+							.swiper-slide.participate-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304017.jpg")
+							.swiper-slide.participate-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304015.jpg")
+							//- .swiper-slide.participate-slider-slide
+							//- 	img(src="https://hhcdn.ru/ichameleon/304019.jpg")
+							.swiper-slide.participate-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304018.jpg")
+						.slider__pagination.slider__pagination--participate
+							span.swiper-pagination-bullet
+						.life__slider-logo 
+							img(src="https://hhcdn.ru/ichameleon/303981.svg")
+					.life__card-content 
+						.life__card-title МЫ участвуем
+						.life__card-text 
+							p в различных профессиональных конференциях, семинарах и хакатонах.
+				<!-- END PARTICIPATE -->
+				<!-- START EMPLOYEE -->
+				.life__card.life__card--employee
+					.swiper-container.employee-slider
+						.swiper-wrapper
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304027.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304021.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304024.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304020.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304023.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304028.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304026.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304025.jpg")
+							.swiper-slide.employee-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304022.jpg")
+						.slider__pagination.slider__pagination--employee
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+						.life__slider-logo 
+							img(src="https://hhcdn.ru/ichameleon/303981.svg")
+					.life__card-content 
+						.life__card-title НАШИ сотрудники
+						.life__card-text 
+							p стремятся прокачивать <br> и себя и коллег.
+				<!-- END EMPLOYEE -->
+
+				<!-- START RELAX -->
+				.life__card.life__card--relax
+					.swiper-container.relax-slider
+						.swiper-wrapper
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304033.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304030.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304034.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304031.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304037.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304036.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304035.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304029.jpg")
+							.swiper-slide.relax-slider-slide
+								img(src="https://hhcdn.ru/ichameleon/304032.jpg")
+						.slider__pagination.slider__pagination--relax
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+							span.swiper-pagination-bullet
+						.life__slider-logo 
+							img(src="https://hhcdn.ru/ichameleon/303981.svg")
+					.life__card-content 
+						.life__card-title Кто много работает - тот может отдохнуть. 
+						.life__card-text 
+							p Кроме спортивных мероприятий мы проводим квизы внутри компании и ходим на городские, организуем выезды и посиделки:)
+				<!-- END RELAX -->
+	<!-- END LIFE -->
+
+	<!-- START VALUES -->
+	.section.values 
+		.container 
+			.values__title Наша ценности
+			.values__inner 
+				+values-card('v1', 'Ориентация на результат')
+				+values-card('v2', 'Гибкость')
+				+values-card('v3', 'Открытость')
+				+values-card('v4', 'Вовлечение')
+				+values-card('v5', 'Развитие')
+				+values-card('v6', 'Команда')
+	<!-- END VALUES -->
+
+	<!-- START FOOTER -->
+	.section.footer
+		.container 
+			.footer__inner 
+				.footer__text GO в команду <span>WOOPPAY</span>
+				.footer__btn-wrapper 
+					.footer__btn-link
+						.vacancy-btn Вакансии
+						.footer__btn-arrow 
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+								<path d="M8.25 2L18 11.75L8.25 21.5" stroke="white" stroke-width="4"/>
+							</svg>
+	<!-- END FOOTER -->
+	<!-- START CONTACTS -->
+	.section.contacts#contacts
+		.contacts__inner 
+			.contacts__title Контакты
+			.contacts__location 
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<circle cx="11.959" cy="10.8965" r="3.68653" stroke="black" stroke-width="2"/>
+					<path d="M20.9829 11.1707C20.9829 12.0328 20.6717 13.0323 20.0891 14.1268C19.511 15.2128 18.7004 16.3278 17.7869 17.4028C15.9595 19.5532 13.7975 21.4539 12.4939 22.5304C12.1774 22.7918 11.7401 22.7918 11.4236 22.5304C10.12 21.4539 7.95794 19.5532 6.13058 17.4028C5.21705 16.3278 4.4065 15.2128 3.82842 14.1268C3.24582 13.0323 2.93457 12.0328 2.93457 11.1707C2.93457 6.18675 6.97483 2.14648 11.9587 2.14648C16.9427 2.14648 20.9829 6.18675 20.9829 11.1707Z" stroke="black" stroke-width="2"/>
+				</svg>
+				p Казахстан, Караганда, ул. Назарабаева 15/1
+			.contacts__social 
+				.contacts__social-left
+					.contacts__social-web 
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.91687 17.0918H8.91379" stroke="black" stroke-width="2"/>
+							<path d="M5.91394 12.8994L10.1064 17.092L5.91394 21.2845" stroke="black" stroke-width="2"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.81935 11.0283C5.49547 7.31325 8.74775 4.49658 12.6579 4.49658C17.0583 4.49658 20.6255 8.06379 20.6255 12.4642C20.6255 16.8645 17.0583 20.4318 12.6579 20.4318C12.2337 20.4318 11.8172 20.3986 11.411 20.3348V22.3545C11.8194 22.4055 12.2356 22.4318 12.6579 22.4318C18.1628 22.4318 22.6255 17.9691 22.6255 12.4642C22.6255 6.95922 18.1628 2.49658 12.6579 2.49658C7.64055 2.49658 3.48904 6.20368 2.79297 11.0283H4.81935Z" fill="black"/>
+							<path d="M13.7588 3.30176L14.2506 4.32836C16.8657 9.78689 16.6825 16.1725 13.7588 21.4722V21.4722" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+							<path d="M10.5732 3.30176L7.87701 10.8091" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+							<path d="M22.0703 12.3867L10.1064 12.3867" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+						</svg>
+						a(href="http://wooppay.corp.tilda.ws/" target="_blank") wooppay.corp.tilda.ws
+					.contacts__social-phone 
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M16.1905 13.0886L16.2542 13.1198L16.3216 13.1416C17.2954 13.4575 18.5472 14.0044 19.5994 14.4663C19.6956 14.5149 19.7738 14.5691 19.8404 14.6397C19.908 14.7113 19.991 14.8286 20.0573 15.0367C20.1417 15.3019 20.075 15.6973 19.7768 16.2424L18.6321 18.3342C18.5305 18.52 18.433 18.6606 18.3325 18.766L19.056 19.4562L18.3325 18.766C17.7706 19.355 17.3446 19.4932 17.1248 19.5412C16.9517 19.579 16.7384 19.584 16.4668 19.5594C9.95366 18.9685 4.97582 13.2162 4.09431 5.69364C4.0674 5.46407 4.1954 4.89101 4.94918 4.47168L8.2844 3.20064C8.61335 3.08033 8.7889 3.10792 8.87114 3.13954C8.94382 3.16748 9.09375 3.25534 9.25155 3.59521C9.44632 4.01472 9.63357 4.40578 9.80928 4.77274C10.2572 5.70811 10.63 6.48688 10.8615 7.18112C10.9311 7.38997 10.9533 7.52954 10.9578 7.6153C10.96 7.65716 10.958 7.68465 10.9559 7.70046C10.9542 7.71285 10.9524 7.71948 10.9517 7.72174C10.9507 7.72314 10.9485 7.72594 10.9446 7.73024C10.9336 7.74231 10.9132 7.76155 10.8746 7.79024L9.41512 8.5174C9.41512 8.5174 9.41511 8.5174 9.41511 8.5174C8.93146 8.75837 8.67553 9.3327 8.87122 9.8737C9.21464 10.8231 9.84606 11.8122 10.6146 12.6617C11.3832 13.5112 12.3426 14.2804 13.3857 14.733C13.8551 14.9366 14.3858 14.7863 14.6867 14.4031L14.6868 14.4031L15.529 13.3305L15.5684 13.2804L15.601 13.2258C15.67 13.1102 15.7273 13.0497 15.7625 13.0201C15.7944 12.9932 15.8112 12.9886 15.8164 12.9872C15.8222 12.9857 15.9257 12.959 16.1905 13.0886Z" stroke="black" stroke-width="2"/>
+						</svg>
+						a(href="tel:+77789761221") 8 (778) 976 12 21
+				.contacts__social-rigth 
+					.contacts__social-mail 
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+							<rect x="1.60449" y="1.94678" width="18.7082" height="14.1063" rx="3" stroke="black" stroke-width="2"/>
+							<path d="M17.8621 5.54858V5.54858C17.4846 5.54858 17.1132 5.64329 16.7819 5.82403L12.8748 7.95518C11.6809 8.6064 10.2379 8.6064 9.04395 7.95518L5.13686 5.82403C4.8055 5.64329 4.43409 5.54858 4.05664 5.54858V5.54858" stroke="black" stroke-width="2"/>
+						</svg>
+						a(href="mailto:hr@wooppay.com") hr@wooppay.com
+					.contacts__social-telegram 
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M3.22532 10.7088C3.22532 10.7088 12.071 6.31864 15.1393 4.77308C16.3155 4.1552 20.3038 2.17661 20.3038 2.17661C20.3038 2.17661 22.1451 1.31055 21.9908 3.41409C21.9399 4.28015 21.5308 7.30964 21.1218 10.5873C20.5076 15.2257 19.8438 20.2954 19.8438 20.2954C19.8438 20.2954 19.7419 21.7177 18.8729 21.9642C18.0039 22.2124 16.5716 21.0981 16.3169 20.8517C16.1117 20.6668 12.4814 17.8838 11.1524 16.5231C10.7944 16.1517 10.3853 15.4105 11.2034 14.5445C13.0447 12.5043 15.2427 9.96944 16.5716 8.36055C17.1859 7.61773 17.7987 5.88732 15.2427 7.98914C11.6124 11.0186 8.0331 13.8633 8.0331 13.8633C8.0331 13.8633 7.21506 14.4812 5.68087 13.9249C4.14668 13.3686 2.35774 12.6258 2.35774 12.6258C2.35774 12.6258 1.12926 11.6981 3.22532 10.7088Z" fill="#00A3FF"/>
+						</svg>
+						a(href="http://t.me/wooppayhr" target="_blank") @wooppayhr
+	<!-- END CONTACTS -->
